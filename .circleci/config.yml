@@ -42,4 +42,4 @@ jobs:
           when: always
 
       # run tests!
-      - run: ./gradlew clean check
+      - run: mvn clean check
