@@ -36,10 +36,7 @@ jobs:
             chmod +x ~/docker-compose
             sudo mv ~/docker-compose /usr/local/bin/docker-compose
 
-      - run:
-          name: Stop and Remove Docker Containers
-          command: docker-compose -f src/test/resources/docker-compose.yml down --rmi all --volumes
-          when: always
+
 
       # run tests!
-      - run: mvn clean check
+      - run: mvn clean install
