@@ -13,6 +13,8 @@ jobs:
 
     steps:
       - checkout
+      
+      - run: rm /.dockerenv
 
       # run tests!
       - run: mvn -B clean install
