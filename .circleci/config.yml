@@ -34,5 +34,7 @@ jobs:
             chmod +x ~/docker-compose
             mv ~/docker-compose /usr/local/bin/docker-compose
 
+      - run: rm /.dockerenv
+
       # run tests!
       - run: mvn clean install
